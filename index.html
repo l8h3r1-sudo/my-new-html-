@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VL SPARK - Your Future Starts Here</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ffe0f7,#d8e5ff,#e5d5ff);
+    color: #29204d;
+}
+
+header {
+    padding: 22px;
+    background: linear-gradient(90deg,#8e44ff,#ec45b9);
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px;
+    background: white;
+}
+
+nav a {
+    color: #873be9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 24px;
+    border-radius: 25px;
+    background: linear-gradient(90deg,#8e44ff,#ee42b9);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.features {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px #8d68b833;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card .emoji {
+    font-size: 40px;
+}
+
+.card h3 {
+    margin: 12px 0;
+    color: #873be9;
+}
+
+.ai-section {
+    background: white;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 650px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d8baff;
+    border-radius: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+#answer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f5edff;
+    border-radius: 12px;
+    min-height: 45px;
+}
+
+footer {
+    background: #42206e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 35px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>✨ VL SPARK</h1>
+    <p>Imagine • Create • Innovate</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#ai">AI Assistant</a>
+    <a href="#about">About</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>Welcome to VL SPARK 🚀</h2>
+    <p>Your colourful digital world starts here.</p>
+    <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+        Explore VL SPARK
+    </button>
+</section>
+
+<section class="features" id="features">
+    <h2>Explore Our Features 🌈</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="emoji">🤖</div>
+            <h3>AI Assistant</h3>
+            <p>Ask questions and explore ideas.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🎨</div>
+            <h3>Creative Studio</h3>
+            <p>Discover your creativity and design ideas.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📚</div>
+            <h3>Smart Learning</h3>
+            <p>Learn new things and develop skills.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">💡</div>
+            <h3>Idea Generator</h3>
+            <p>Explore exciting new ideas.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">💻</div>
+            <h3>Tech World</h3>
+            <p>Discover the world of technology.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌟</div>
+            <h3>Daily Inspiration</h3>
+            <p>Get inspired to achieve your goals.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">📝</div>
+            <h3>Notes</h3>
+            <p>Write and save your ideas in this session.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🎯</div>
+            <h3>Goal Planner</h3>
+            <p>Plan your next big achievement.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="ai-section" id="ai">
+    <h2>🤖 VL SPARK Assistant</h2>
+    <p>Type a question or choose an idea!</p>
+
+    <input type="text" id="question"
+    placeholder="Type something here...">
+
+    <button onclick="askAI()">Ask VL SPARK</button>
+
+    <div id="answer">Your response will appear here ✨</div>
+</section>
+
+<section class="features" id="about">
+    <h2>About VL SPARK 💜</h2>
+    <p>VL SPARK is a creative technology project built to inspire learning, creativity and innovation.</p>
+</section>
+
+<footer>
+    <h3>✨ VL SPARK</h3>
+    <p>Dream Big. Create More. Shine Bright.</p>
+    <p>© 2026 VL SPARK</p>
+</footer>
+
+<script>
+function askAI() {
+    let question = document.getElementById("question").value.trim();
+    let answer = document.getElementById("answer");
+
+    if (question === "") {
+        answer.innerText = "Please type a question first! 😊";
+        return;
+    }
+
+    answer.innerText =
+    "Thanks for asking! ✨ You asked: " + question +
+    ". The VL SPARK smart AI connection is coming soon!";
+}
+</script>
+
+</body>
+</html>
